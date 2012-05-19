@@ -2,11 +2,11 @@ package eu.xibit.jwui.components;
 
 public final class EVAlign {
 
-    public static final EVAlign top = new EVAlign(0, "top");
+    public static final EVAlign Top = new EVAlign(0, "top");
 
-    public static final EVAlign middle = new EVAlign(1, "middle");
+    public static final EVAlign Middle = new EVAlign(1, "middle");
 
-    public static final EVAlign bottom = new EVAlign(2, "bottom");
+    public static final EVAlign Bottom = new EVAlign(2, "bottom");
 
 
 

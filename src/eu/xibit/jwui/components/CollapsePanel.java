@@ -170,8 +170,8 @@ public class CollapsePanel extends AComponent {
         ttle.setFontFamily(this.fontFamily);
         ttle.setFontSize(this.fontSize);
         ttle.setForeColor(this.titleColor);
-        ttle.setHorizontalAlign(EHAlign.center);
-        ttle.setVerticalAlign(EVAlign.middle);
+        ttle.setHorizontalAlign(EHAlign.Center);
+        ttle.setVerticalAlign(EVAlign.Middle);
         //title.setLink(new Link("#\" onClick=\"javascript:toggleCollapsePanel_" + this.getId() + "();"));
         titlePanel.setRootComponent(ttle);
 

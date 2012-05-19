@@ -2,11 +2,9 @@ package eu.xibit.jwui.components;
 
 public final class EHAlign {
 
-    public static final EHAlign left = new EHAlign(0, "left");
-
-    public static final EHAlign center = new EHAlign(1, "center");
-
-    public static final EHAlign right = new EHAlign(2, "right");
+    public static final EHAlign Left = new EHAlign(0, "left");
+    public static final EHAlign Center = new EHAlign(1, "center");
+    public static final EHAlign Right = new EHAlign(2, "right");
 
 
 

@@ -4,8 +4,8 @@ public final class Background {
 
     private Color color = null;
     private Image image = null;
-    private EHAlign horizontalAlign = EHAlign.left;
-    private EVAlign verticalAlign = EVAlign.top;
+    private EHAlign horizontalAlign = EHAlign.Left;
+    private EVAlign verticalAlign = EVAlign.Top;
     private boolean horizontalRepeat = true;
     private boolean verticalRepeat = true;
 

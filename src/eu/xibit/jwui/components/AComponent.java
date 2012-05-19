@@ -14,8 +14,8 @@ public abstract class AComponent {
     private double width = -1.0;
     private double height = -1.0;
     private boolean visible = true;
-    private EHAlign horizontalAlign = EHAlign.left;
-    private EVAlign verticalAlign = EVAlign.top;
+    private EHAlign horizontalAlign = EHAlign.Left;
+    private EVAlign verticalAlign = EVAlign.Top;
     private String onKeyDownScript = null;
     private String onKeyPressScript = null;
     private String onKeyUpScript = null;
@@ -85,16 +85,16 @@ public abstract class AComponent {
         String res = "";
 
         // horizontal align
-        if (this.horizontalAlign == EHAlign.center) {
+        if (this.horizontalAlign == EHAlign.Center) {
             res += "margin-left:auto;margin-right:auto;";
-        } else if (this.horizontalAlign == EHAlign.right) {
+        } else if (this.horizontalAlign == EHAlign.Right) {
             res += "margin-left:auto;margin-right:0px;";
         }
 
         // vertical align
-        if (this.verticalAlign == EVAlign.middle) {
+        if (this.verticalAlign == EVAlign.Middle) {
             res += "margin-top:auto;margin-bottom:auto;";
-        } else if (this.verticalAlign == EVAlign.bottom) {
+        } else if (this.verticalAlign == EVAlign.Bottom) {
             res += "margin-top:auto;margin-bottom:0px;";
         }
         
