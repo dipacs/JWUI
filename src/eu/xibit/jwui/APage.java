@@ -15,7 +15,26 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- *
+ * This class is the base class of all the JWUI pages. You need to create a servlet which inherited from this class.
+ * In you servlet class, overwrite initPage(...) abstract method, and create your UI as you want. A hello world page 
+ * may looks like this: 
+ * <p><pre><code>
+ * public class JwuiTest extends APage {
+ * 
+ *     protected void initPage(Request request, Response response) {
+ *         // creating a label
+ *         Label lbl = new Label();
+ *         
+ *         // setting propertyes of the label
+ *         lbl.setText("Hello Wrold!");
+ *         lbl.setFontFamily(EFontFamily.ComicSansMS);
+ *         lbl.setFontSize(32);
+ * 
+ *         // adding the label as the root component of this page
+ *         this.setRootComponent(lbl);
+ *     }
+ * }
+ * </code></pre></p>
  * @author dipacs
  */
 public abstract class APage extends HttpServlet {
