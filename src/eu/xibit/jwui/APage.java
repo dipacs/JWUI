@@ -92,27 +92,83 @@ public abstract class APage extends HttpServlet {
 
     
     
+    /**
+     * Returns the root component of this page.<br/>
+     * The root component of the page is the component which is rendered. In the most of the cases this will be some kind of 
+     * container.
+     * 
+     * @return 
+     * The root component of this page.
+     */
     public AComponent getRootComponent() {
         return rootComponent;
     }
 
+    /**
+     * Sets the root component of the page.<br/>
+     * The root component of the page is the component which is rendered. In the most of the cases this will be some kind of 
+     * container.
+     * 
+     * @param rootComponent 
+     * The new root component.
+     */
     public void setRootComponent(AComponent rootComponent) {
         this.rootComponent = rootComponent;
     }
 
+    /**
+     * Returns the list of the included JavaScript (.js) files. You can add your own JavaScript which will be included to the html page.<br/>
+     * Just put the url and name of your javascript file. Eg.: if your javascript has the name myscript.js and it's in the scripts folder in the webroot,
+     * then add the "scripts/myscript.js" to the list.
+     * 
+     * @return 
+     * The list of the included JavaScript (.js) files.
+     */
     public List<String> getJavaScriptIncludes() {
         return javaScriptIncludes;
     }
 
+    /**
+     * Returns the title of this page.
+     * <p>
+     * The title of the page is visible on the browser's title bar. If the title is null or empty string, than 
+     * "Untitled Document" will be the title of your page.
+     * </p>
+     * 
+     * @return 
+     * The title of this page.
+     */
     public String getTitle() {
         return title;
     }
 
+    /**
+     * Sets the title of this page.
+     * <p>
+     * The title of the page is visible on the browser's title bar. If the title is null or empty string, than 
+     * "Untitled Document" will be the title of your page.
+     * </p>
+     * 
+     * @param title 
+     * The new title of this page.
+     */
     public void setTitle(String title) {
         this.title = title;
     }
 
     
     
+    /**
+     * This method is invoked every time when this page is requested. You need to override this method and construct your
+     * UI in this method.
+     * <p>
+     * Do not forget to set the root component of this page using the setRootComponent(...) method. Without this, your page will be empty.
+     * </p>
+     * 
+     * @param request
+     * The request parameters of the page.
+     * @param response 
+     * The response object which can be used to set response parameters (eg.: headers and cookies).
+     */
     protected abstract void initPage(Request request, Response response);
 }
