@@ -5,6 +5,7 @@ public class Border {
     private final EBorderStyle style;
     private final Color color;
     private final int width;
+    private int radius = 0;
 
 
 
@@ -31,6 +32,14 @@ public class Border {
         return this.width;
     }
 
+    public int getRadius() {
+        return radius;
+    }
+
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
 
 
     public String toCss() {
@@ -50,6 +59,12 @@ public class Border {
             res += "border-width:" + Integer.toString(this.width) + "px;";
         } else {
             res += "border-width:1px";
+        }
+        
+        if (radius > 0) {
+            res += "-webkit-border-radius:" + radius + "px;"
+                    + "-moz-border-radius:" + radius + "px;"
+                    + "border-radius:" + radius + "px;";
         }
 
         return res;
