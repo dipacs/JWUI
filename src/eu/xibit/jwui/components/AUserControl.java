@@ -12,7 +12,7 @@ public abstract class AUserControl extends AComponent {
     private EOverflowType horizontalOverflow = EOverflowType.Visible;
     private EOverflowType verticalOverflow = EOverflowType.Visible;
     private Border border = null;
-    private Background background = null;
+    private ABackground background = null;
     
     
     
@@ -152,7 +152,7 @@ public abstract class AUserControl extends AComponent {
      * @return 
      * The background style of this control. Null means no background.
      */
-    protected Background getBackground() {
+    protected ABackground getBackground() {
         return this.background;
     }
 
@@ -162,7 +162,7 @@ public abstract class AUserControl extends AComponent {
      * @param background 
      * The new background style of this control. Null means no background.
      */
-    protected void setBackground(Background background) {
+    protected void setBackground(ABackground background) {
         this.background = background;
     }
 
@@ -206,7 +206,7 @@ public abstract class AUserControl extends AComponent {
         
         // adding back color
         if (this.background != null) {
-            res += this.background.getCssStyle();
+            res += this.background.toCss();
         }
 
         // adding border

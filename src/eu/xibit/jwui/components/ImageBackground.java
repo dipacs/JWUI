@@ -1,90 +1,70 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package eu.xibit.jwui.components;
 
-public final class Background {
-
-    private Color color = null;
-    private Image image = null;
+/**
+ *
+ * @author dipacs
+ */
+public class ImageBackground extends ABackground {
+    
+    private final Image image;
     private EHAlign horizontalAlign = EHAlign.Left;
     private EVAlign verticalAlign = EVAlign.Top;
     private boolean horizontalRepeat = true;
     private boolean verticalRepeat = true;
 
-
-
-
-    public Background() {
-        super();
-    }
-
-
-
-
-    public Color getColor() {
-        return this.color;
-    }
-
-    public void setColor(Color color) {
-        this.color = color;
-    }
-
-
-
-    public Image getImage() {
-        return this.image;
-    }
-
-    public void setImage(Image image) {
+    
+    
+    
+    public ImageBackground(Image image) {
         this.image = image;
     }
 
-
     
+    
+    
+    public Image getImage() {
+        return image;
+    }
+
     public EHAlign getHorizontalAlign() {
-        return this.horizontalAlign;
+        return horizontalAlign;
     }
 
     public void setHorizontalAlign(EHAlign horizontalAlign) {
         this.horizontalAlign = horizontalAlign;
     }
 
-
-
-    public EVAlign getVerticalAlign() {
-        return this.verticalAlign;
-    }
-
-    public void setVerticalAlign(EVAlign verticalAlign) {
-        this.verticalAlign = verticalAlign;
-    }
-
-    
-
     public boolean isHorizontalRepeat() {
-        return this.horizontalRepeat;
+        return horizontalRepeat;
     }
 
     public void setHorizontalRepeat(boolean horizontalRepeat) {
         this.horizontalRepeat = horizontalRepeat;
     }
 
+    public EVAlign getVerticalAlign() {
+        return verticalAlign;
+    }
 
+    public void setVerticalAlign(EVAlign verticalAlign) {
+        this.verticalAlign = verticalAlign;
+    }
 
     public boolean isVerticalRepeat() {
-        return this.verticalRepeat;
+        return verticalRepeat;
     }
 
     public void setVerticalRepeat(boolean verticalRepeat) {
         this.verticalRepeat = verticalRepeat;
     }
-
-
-
-    public String getCssStyle() {
+    
+    @Override
+    public String toCss() {
         String res = "";
-
-        if (this.color != null) {
-            res += "background-color:#" + this.color.toHexStringRGB() + ";";
-        }
 
         if (this.image != null) {
             if (this.image.getUrl() != null) {
@@ -119,5 +99,5 @@ public final class Background {
 
         return res;
     }
-
+    
 }

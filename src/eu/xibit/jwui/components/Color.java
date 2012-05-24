@@ -206,6 +206,10 @@ public final class Color {
     public String toString() {
         return "#" + this.toHexStringARGB();
     }
+    
+    public String toCssRGB() {
+        return "rgb(" + this.red + "," + this.green + "," + this.blue + ")";
+    }
 
     @Override
     public boolean equals(Object other) {

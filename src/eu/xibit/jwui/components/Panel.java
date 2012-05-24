@@ -53,12 +53,12 @@ public final class Panel extends AUserControl {
     }
 
     @Override
-    public Background getBackground() {
+    public ABackground getBackground() {
         return super.getBackground();
     }
 
     @Override
-    public void setBackground(Background background) {
+    public void setBackground(ABackground background) {
         super.setBackground(background);
     }
 

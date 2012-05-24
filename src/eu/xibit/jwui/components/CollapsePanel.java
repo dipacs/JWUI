@@ -106,13 +106,11 @@ public class CollapsePanel extends AComponent {
         titlePanel.setWidth(0.99999);
         titlePanel.setHeight(0.99999);
         titlePanel.setId(titlePanel.getId() + "_title");
-        Background bg = null;
+        ImageBackground bg = null;
         if (this.collapsed) {
-            bg = new Background();
-            bg.setImage(this.collapsedBackground);
+            bg = new ImageBackground(this.collapsedBackground);
         } else {
-            bg = new Background();
-            bg.setImage(this.expandedBackground);
+            bg = new ImageBackground(this.expandedBackground);
         }
         titlePanel.setBackground(bg);
 
