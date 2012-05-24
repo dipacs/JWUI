@@ -112,7 +112,7 @@ public class HBox extends AComponent {
         String style = this.renderSizeStyle();
         
 
-        String res = "<table style=\"" + style + "\" cellspacing=\"" + Integer.toString(this.spacing) + " cellpadding=\"" + Integer.toString(this.spacing) + "\""; 
+        String res = "<table style=\"" + style + "\" cellspacing=\"0\" cellpadding=\"0\""; 
         if (this.getHeight() >= 0.0) {
             res += " height=\"";
             if (this.getHeight() == 0.0) {
@@ -124,7 +124,7 @@ public class HBox extends AComponent {
             }
             res += "\"";
         }
-        res += "\">\n";
+        res += "\"><tr>\n";
 
         boolean first = true;
         int cellWidth = -1;
@@ -159,6 +159,9 @@ public class HBox extends AComponent {
                     }
 
                     res += "</td>\n";
+                    if (spacing > 0) {
+                        res += "<td style=\"width:" + spacing + "px;\"></td>";
+                    }
                 //}
             //}
         }

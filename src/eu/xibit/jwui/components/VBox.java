@@ -112,7 +112,7 @@ public class VBox extends AComponent {
     public String render() {
         String style = this.renderSizeStyle();
 
-         String res = "<table style=\"" + style + "\" cellspacing=\"" + Integer.toString(this.spacing) + " cellpadding=\"" + Integer.toString(this.spacing) + "\""; 
+         String res = "<table style=\"" + style + "\" cellspacing=\"0\" cellpadding=\"0\""; 
         if (this.getWidth() >= 0.0) {
             res += " width=\"";
             if (this.getWidth() == 0.0) {
@@ -159,6 +159,9 @@ public class VBox extends AComponent {
                     }
 
                     res += "</td></tr>\n";
+                    if (spacing > 0) {
+                        res += "<tr><td style=\"height:" + spacing + "px;\"></td></r>";
+                    }
                 //}
             //}
         }
